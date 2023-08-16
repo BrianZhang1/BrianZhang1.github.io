@@ -1,0 +1,220 @@
+
+/*
+Element Styles
+==============================
+*/
+
+html {
+    font-size: 1vw;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p {
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 8rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+
+/*
+General Styles
+==============================
+*/
+
+.opacity-0 {
+    opacity: 0;
+}
+.opacity-transition-slow {
+    transition: opacity 1.5s ease;
+}
+.opacity-transition-medium {
+    transition: opacity 1s ease;
+}
+.opacity-transition-fast {
+    transition: opacity 0.5s ease;
+}
+
+.darken {
+    filter: brightness(95%);
+}
+.darken-transition {
+    transition: filter 1s ease;
+}
+
+.absolute-centered-horizontal {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.absolute-float-from-bottom {
+    position: absolute;
+    bottom: 1vw;
+}
+
+.flex-row-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-column-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flex-column-start-aligned {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.flex-column-start-aligned p,
+.flex-column-start-aligned h2 {
+    text-align: start;
+}
+
+.flex-grow {
+    flex: 1 1 auto;
+}
+
+.margin-small-horizontal {
+    margin: 0 2vw;
+}
+
+.display-none {
+    display: none;
+}
+
+.inline-img {
+    display: inline;
+    height: 1em;
+    margin: 0 0.5em;
+}
+
+.vertical-bar {
+    background-color: rgb(173, 173, 173);
+    height: 24vw;
+    width: 1vw;
+    margin: 0 2vw;
+}
+
+
+/*
+ID-Specific Styles
+==============================
+*/
+
+#display-area {
+    position: relative;
+    background-color: rgb(250, 250, 250);
+    height: 30vw;
+}
+
+/* initial display area fades left on portfolio item click */
+#initial-display {
+    transition: transform 1s ease, opacity 1s ease;
+}
+#initial-display.fade-left {
+    transform: translateX(-75vw);
+}
+
+#skip-animation-button {
+    opacity: 0.1;
+}
+#skip-animation-button:hover {
+    opacity: 0.5;
+}
+
+/* animated blinking cursor */
+#cursor {
+    height: 1em;
+    width: 0.05em;
+    background-color: black;
+    opacity: 0;
+    animation-name: blink;
+    animation-duration: 0.7s;
+    animation-iteration-count: 8;
+}
+#cursor.remove-animation {
+    animation: none;
+}
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 100;
+    }
+}
+
+#item-display > button {
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    border: none;
+    opacity: 0.6;
+    border-radius: 5%;
+}
+#item-display > button:hover {
+    opacity: 1;
+}
+#item-display > button > img {
+    width: 2vw;
+}
+#item-display > div {
+    width: 40vw;
+    margin-right: 5vw;
+}
+#item-display p {
+    line-height: 2.5vw;
+    margin-bottom: 1vw;
+}
+#item-display > iframe {
+    width: 40vw;
+    height: 90%;
+}
+
+#portfolio-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    margin: 2vw;
+}
+#portfolio-area > button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    border-radius: 5%;
+    border-width: 1vw;
+    box-shadow: 1vw 1vw 5px rgb(142, 142, 142);
+    transition: transform 0.3s ease;
+}
+#portfolio-area > button:hover {
+    transform: translateY(-1.5vw);
+}
+#portfolio-area > button > img {
+    width: 90%;
+    margin-top: 1vw;
+}

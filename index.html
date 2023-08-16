@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Brian Zhang</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+    <main>
+        <div id="display-area" class="flex-column-centered darken-transition">
+            <div id="initial-display" class="flex-column-centered flex-grow">
+                <h1 class="flex-grow flex-row-centered">
+                    <!-- dynamically updated in js for typing animation -->
+                    <span id="name-display"></span>
+                    <span id="cursor"></span>
+                </h1>
+                <button id="skip-animation-button" class="absolute-float-from-bottom"><p>Skip Animation</p></button>
+                <div class="display-none absolute-centered-horizontal absolute-float-from-bottom flex-row-centered opacity-0 opacity-transition-slow">
+                    <a href="https://github.com/BrianZhang1" target="_blank" class="margin-small-horizontal">
+                        <p class="flex-row-centered">
+                            GitHub
+                            <img src="images/github-logo.png" alt="github logo" class="inline-img">
+                        </p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/brian-zhang-bz/" target="_blank" class="margin-small-horizontal">
+                        <p class="flex-row-centered">
+                            LinkedIn
+                            <img src="images/linkedin-logo.png" alt="linkedin logo" class="inline-img">
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div id="item-display" class="display-none flex-row-centered opacity-0 opacity-transition-medium flex-grow">
+                <button class="opacity-transition-fast"><img src="images/back-button.png" alt="back button"></button>
+                <div class="flex-row-centered">
+                    <div class="vertical-bar"></div>
+                    <div class="flex-column-start-aligned">
+                        <h2></h2>
+                        <p></p>
+                        <a href="https://github.com/BrianZhang1" target="_blank">
+                            <p class="flex-row-centered">
+                                View on GitHub
+                                <img src="images/github-logo.png" alt="github logo" class="inline-img">
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+                <iframe src="" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div id="portfolio-area" class="opacity-0">
+            <button id="swing-paint">
+                <h3>Swing Paint</h3>
+                <p>Java Swing GUI</p>
+                <img src="images/swing-paint-preview.png">
+            </button>
+            <button id="dweller">
+                <h3>Dweller</h3>
+                <p>Python Pygame Platformer</p>
+                <img src="images/dweller-preview.png">
+            </button>
+            <button id="reaction-timer">
+                <h3>Reaction Timer</h3>
+                <p>Flask and SQL Website</p>
+                <img src="images/reaction-timer-preview.png">
+            </button>
+            <button id="snakefest">
+                <h3>Snakefest</h3>
+                <p>Python Tkinter Snake</p>
+                <img src="images/snakefest-preview.png">
+            </button>
+            <button id="youtube-clone">
+                <h3>Youtube Clone</h3>
+                <p>Copy of Youtube's UI</p>
+                <img src="images/youtube-clone-preview.png">
+            </button>
+            <button id="tournament-timer">
+                <h3>Tournament Timer</h3>
+                <p>Tournament-Formatted Timer</p>
+                <img src="images/tournament-timer-preview.png">
+            </button>
+        </div>
+    </main>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>
