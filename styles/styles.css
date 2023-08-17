@@ -69,7 +69,7 @@ General Styles
 }
 .absolute-float-from-bottom {
     position: absolute;
-    bottom: 1vw;
+    bottom: 2vw;
 }
 
 .flex-row-centered {
@@ -140,7 +140,7 @@ ID-Specific Styles
 }
 
 #skip-animation-button {
-    opacity: 0.1;
+    opacity: 0.2;
 }
 #skip-animation-button:hover {
     opacity: 0.5;
@@ -206,8 +206,7 @@ ID-Specific Styles
     flex-direction: column;
     align-items: center;
     padding: 1vw;
-    border-radius: 5%;
-    border-width: 1vw;
+    border-width: 0.75vw;
     box-shadow: 1vw 1vw 5px rgb(142, 142, 142);
     transition: transform 0.3s ease;
 }

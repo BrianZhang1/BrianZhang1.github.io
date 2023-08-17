@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(type, 200);
         }
         else {
-            skipAnimationButton.remove();
+            skipAnimationButton.style.opacity = 0;
+            setTimeout(skipAnimationButton.remove, 500);
             socialMediaWrapper.classList.remove("display-none");
             setTimeout(() => {
                 socialMediaWrapper.classList.remove("opacity-0");
