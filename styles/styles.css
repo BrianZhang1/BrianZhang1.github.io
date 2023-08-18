@@ -213,10 +213,11 @@ ID-Specific Styles
     padding: 1vw;
     border-width: 0.75vw;
     box-shadow: 1vw 1vw 5px rgb(142, 142, 142);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 #portfolio-area > button:hover {
     transform: translateY(-1.5vw);
+    filter: brightness(105%);
 }
 #portfolio-area > button > img {
     width: 90%;
