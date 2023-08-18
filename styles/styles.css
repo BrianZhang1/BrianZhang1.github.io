@@ -8,12 +8,12 @@ html {
     font-size: 1vw;
 }
 
-body, h1, h2, h3, p {
+body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, h5, h6, p {
     text-align: center;
     vertical-align: middle;
     font-family: 'Courier New', Courier, monospace;
@@ -30,6 +30,10 @@ h2 {
 
 h3 {
     font-size: 2rem;
+}
+
+h5 {
+    color: gray;
 }
 
 p {
@@ -196,6 +200,7 @@ ID-Specific Styles
 }
 
 #portfolio-area {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2vw;
@@ -216,4 +221,11 @@ ID-Specific Styles
 #portfolio-area > button > img {
     width: 90%;
     margin-top: 1vw;
+}
+
+#see-more-details-text {
+    height: 1vw;
+    margin-top: 2vw;
+    transition: height 1s ease, margin-top 1s ease;
+    overflow: hidden;
 }

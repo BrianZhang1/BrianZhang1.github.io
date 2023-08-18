@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const text = "brian_zhang";
 
     const socialMediaWrapper = document.querySelector("#initial-display > div");
-    const portfolioArea = document.querySelector("#portfolio-area");
+    const portfolioAreaWrapper = document.querySelector("#portfolio-area-wrapper");
     const skipAnimationButton = document.querySelector("#skip-animation-button");
     const portfolioItems = document.querySelectorAll("#portfolio-area > button");
     skipAnimationButton.onclick = () => {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         type();
     };
     setTimeout(() => {
-        portfolioArea.classList.add("opacity-transition-slow");
+        portfolioAreaWrapper.classList.add("opacity-transition-slow");
         skipAnimationButton.classList.add("opacity-transition-fast");
     }, 50);
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             socialMediaWrapper.classList.remove("display-none");
             setTimeout(() => {
                 socialMediaWrapper.classList.remove("opacity-0");
-                portfolioArea.classList.remove("opacity-0");
+                portfolioAreaWrapper.classList.remove("opacity-0");
                 Array.from(portfolioItems).forEach((item) => {
                     item.onclick = handlePortfolioClick;
                 });
@@ -50,6 +50,12 @@ function handlePortfolioClick(event) {
     const projectId = event.currentTarget.id;
     window.scrollTo({top: 0, behavior: "smooth"});
     document.querySelector("#cursor").classList.add("remove-animation");
+
+    const seeMoreDetailsText = document.querySelector("#see-more-details-text");
+    if(!seeMoreDetailsText.style.height !== 0) {
+        seeMoreDetailsText.style.height = 0;
+        seeMoreDetailsText.style.marginTop = 0;
+    }
 
     const displayArea = document.querySelector("#display-area");
     const initialDisplay = document.querySelector("#initial-display");
