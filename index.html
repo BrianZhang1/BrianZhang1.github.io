@@ -2,10 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=https://brianz1.pythonanywhere.com/">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Brian Zhang</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <p>If you are not redirected, <a href="https://brianz1.pythonanywhere.com/">click here</a>.</p>
+    <main>
+        <div id="landscape-popup" class="flex-column-centered">
+            <p>Please rotate your device to landscape (horizontal) orientation for a better viewing experience.</p>
+            <button id="landscape-popup-button" class="rounded-border"><p>Dismiss</p></button>
+        </div>
+        <div id="display-area" class="flex-column-centered darken-transition">
+            <div id="initial-display" class="flex-column-centered flex-grow">
+                <h1 class="flex-grow flex-row-centered">
+                    <!-- dynamically updated in js for typing animation -->
+                    <span id="name-display"></span>
+                    <span id="cursor"></span>
+                </h1>
+                <button id="skip-animation-button" class="absolute-float-from-bottom"><p>Skip Animation</p></button>
+                <div class="display-none absolute-centered-horizontal absolute-float-from-bottom flex-row-centered opacity-0 opacity-transition-slow">
+                    <a href="https://github.com/BrianZhang1" target="_blank" class="margin-small-horizontal rounded-border">
+                        <img src="images/github-logo.png" alt="github logo" class="socials-img">
+                    </a>
+                    <a href="https://www.linkedin.com/in/brian-zhang-bz/" target="_blank" class="margin-small-horizontal rounded-border">
+                        <img src="images/linkedin-logo.png" alt="linkedin logo" class="socials-img">
+                    </a>
+                    <a href="https://twitter.com/BrianZhang0" target="_blank" class="margin-small-horizontal rounded-border">
+                        <img src="images/x-logo.png" alt="x logo" class="socials-img">
+                    </a>
+                    <a href="https://blog.brianis.me/" target="_blank" class="margin-small-horizontal rounded-border">
+                        <p>Blog</p>
+                    </a>
+                </div>
+            </div>
+            <div id="item-display" class="display-none flex-row-centered opacity-0 opacity-transition-medium flex-grow">
+                <button class="opacity-transition-fast"><img src="images/back-button.png" alt="back button"></button>
+                <div class="flex-row-centered">
+                    <div class="vertical-bar"></div>
+                    <div class="flex-column-start-aligned">
+                        <h2></h2>
+                        <p class="text-spaced"></p>
+                        <a href="https://github.com/BrianZhang1" target="_blank">
+                            <p class="flex-row-centered rounded-border">
+                                View on GitHub
+                                <img src="images/github-logo.png" alt="github logo" class="inline-img">
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+                <iframe src="" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div id="portfolio-area-wrapper" class="flex-column-centered opacity-0">
+            <h5 id="see-more-details-text" class="height-transition">(Click a project to see more details.)</h5>
+            <div id="portfolio-area" class=""></div>
+        </div>
+
+    </main>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
